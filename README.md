@@ -26,4 +26,5 @@ straightforward to understand and quick to adopt.
 
 ⚡ **[**`Keep Terraform DRY with Terramate Code Generation`**](./01-keep-terraform-dry/)**
 
-Increase the change frequency, reduce the blast radius and provide a clear separation of ownership.
+This example shows how to keep your Terraform DRY using the Terramate Code Generation to generate Terraform files such
+as Provider and Backend configurations.
