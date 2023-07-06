@@ -17,13 +17,9 @@
   <a href="https://terramate.io/docs/cli">📖 Terramate Documentation</a> | <a href="https://play.terramate.io">💻 Playground</a> | <a href="https://terramate.io/discord" title="Join our Discord Community">💬 Discord Community</a> | <a href="https://jobs.ashbyhq.com/terramate" title="Terrmate Job Board">🚀 We are hiring!</a>
 </p>
 
-## Examples
+## Keep your Terraform [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with the Terramate Code Generation
 
-This repository demonstrates the individual use cases and capabilities of Terramate by providing examples that are
-straightforward to understand and quick to adopt.
+This example shows how to keep your Terraform DRY using the Terramate Code Generation to generate Terraform files such
+as Provider and Backend configurations.
 
-## Table of Contents
-
-⚡ **[**`Keep Terraform DRY with Terramate Code Generation`**](./01-keep-terraform-dry/)**
-
-Increase the change frequency, reduce the blast radius and provide a clear separation of ownership.
+<!-- ## Table of Contents -->
