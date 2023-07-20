@@ -1,8 +1,8 @@
 # Import helper files
 import {
-  source = "./helpers/generate_providers.tm.hcl"
+  source = "./imports/generate_backend.tm.hcl"
 }
 
 import {
-  source = "./helpers/generate_backend.tm.hcl"
+  source = "./imports/generate_providers.tm.hcl"
 }
