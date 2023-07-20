@@ -5,7 +5,7 @@ terraform {
     bucket         = "terramate-example-terraform-state-backend"
     dynamodb_table = "terraform_state"
     encrypt        = true
-    key            = "terraform/stacks/by-id/05cb70d5-a2a6-4b36-bf20-2e01ade1070e/terraform.tfstate"
+    key            = "terraform/stacks/by-id/6e30a6fc-8dbd-40e1-a51d-20bc227a91f8/terraform.tfstate"
     region         = "us-east-1"
   }
 }

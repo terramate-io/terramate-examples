@@ -4,12 +4,10 @@ globals "terraform" {
 }
 
 globals "terraform" "backend" "s3" {
+  region = "us-east-1"
   bucket = "terramate-example-terraform-state-backend"
 }
 
-# Will be added to all stacks
 globals "terraform" "providers" "random" {
-  source  = "hashicorp/random"
   version = "~> 3.5"
-  enabled = true
 }
