@@ -28,3 +28,7 @@ straightforward to understand and quick to adopt.
 
 This example shows how to keep your Terraform DRY using the Terramate Code Generation to generate Terraform files such
 as Provider and Backend configurations.
+
+⚡ **[**`Manage Terraform Providers programmatically with Terramate Globals and Code Generation`**](./02-manage-providers-programmatically/)**
+
+This example demonstrates how to manage Terraform Providers programmatically with Terramate Globals and Code Generation.
