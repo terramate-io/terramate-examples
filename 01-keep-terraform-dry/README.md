@@ -20,6 +20,4 @@
 ## Keep your Terraform [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with the Terramate Code Generation
 
 This example shows how to keep your Terraform DRY using the Terramate Code Generation to generate Terraform files such
-as Provider and Backend configurations.
-
-<!-- ## Table of Contents -->
+as Provider and Backend configurations. For details on how to use this examples, please see our [guide on medium](https://blog.terramate.io/generate-terraform-backend-provider-configurations-with-terramate-bc44ff73f4b1).
