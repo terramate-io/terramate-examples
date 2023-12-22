@@ -1,5 +1,5 @@
 globals {
-  "dependencies" = [
+  dependencies = [
     "stacks/vpc",
   ]
 }
