@@ -14,6 +14,5 @@ generate_hcl "dependencies.tf" {
         }
       }
     }
-   }
   }
 }
