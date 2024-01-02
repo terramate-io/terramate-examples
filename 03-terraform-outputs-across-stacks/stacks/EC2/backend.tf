@@ -4,7 +4,7 @@ terraform {
   backend "s3" {
     bucket  = "data-sharing-state-bucket"
     encrypt = true
-    key     = "03-terraform-outputs-across-stacks/stacks/ec2/terraform.state"
+    key     = "03-terraform-outputs-across-stacks/stacks/EC2/terraform.state"
     region  = "us-west-2"
   }
 }

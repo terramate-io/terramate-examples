@@ -1,6 +1,6 @@
 // TERRAMATE: GENERATED AUTOMATICALLY DO NOT EDIT
 
-data "terraform_remote_state" "vpc" {
+data terraform_remote_state "vpc" {
   backend = "s3"
   config = {
     bucket  = "data-sharing-state-bucket"
