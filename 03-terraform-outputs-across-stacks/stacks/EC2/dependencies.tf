@@ -1,11 +1,11 @@
 // TERRAMATE: GENERATED AUTOMATICALLY DO NOT EDIT
 
-data "terraform_remote_state" "vpc" {
+data terraform_remote_state "vpc" {
   backend = "s3"
   config = {
     bucket  = "data-sharing-state-bucket"
     region  = "us-west-2"
     encrypt = true
-    key     = "03-terraform-outputs-across-stacks/stacks/vpc/terraform.state"
+    key     = "stacks/vpc/terraform.state"
   }
 }
