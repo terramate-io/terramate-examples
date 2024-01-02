@@ -5,7 +5,6 @@ generate_hcl "dependencies.tf" {
       iterator = value
       labels   = ["vpc"]
 
-
       content {
         backend = "s3"
 
