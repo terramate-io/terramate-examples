@@ -1,6 +1,6 @@
 generate_hcl "dependencies.tf" {
   content {
-    tm_dynamic "terraform_remote_state" {
+    tm_dynamic "data terraform_remote_state" {
       for_each = global.dependencies
       iterator = value
       labels   = ["vpc"]
@@ -10,8 +10,8 @@ generate_hcl "dependencies.tf" {
         backend = "s3"
 
         config = {
-          bucket  = "mybucket"
-          region  = "us-east-1"
+          bucket  = "data-sharing-state-bucket"
+          region  = "us-west-2"
           encrypt = true
           key     = "${value.value}/terraform.state"
         }

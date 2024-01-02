@@ -3,9 +3,9 @@ generate_hcl "backend.tf" {
   content {
     terraform {
       backend "s3" {
-      bucket = "mybucket"
+      bucket = "data-sharing-state-bucket"
       key    = "${terramate.stack.path.relative}/terraform.state"
-      region = "us-east-1"
+      region = "us-west-2"
       encrypt = true
      }
   }
