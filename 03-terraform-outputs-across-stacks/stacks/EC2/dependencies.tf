@@ -6,6 +6,6 @@ data "terraform_remote_state" "vpc" {
     bucket  = "data-sharing-state-bucket"
     region  = "us-west-2"
     encrypt = true
-    key     = "stacks/vpc/terraform.state"
+    key     = "03-terraform-outputs-across-stacks/stacks/vpc/terraform.state"
   }
 }
