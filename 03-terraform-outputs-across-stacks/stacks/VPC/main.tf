@@ -1,23 +1,9 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-west-2"
-}
-
 resource "aws_vpc" "main" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
   tags = {
-    Name = "main"
+    Name = global.name
   }
 }
 
@@ -26,7 +12,7 @@ resource "aws_subnet" "main" {
   cidr_block = "10.0.1.0/24"
 
   tags = {
-    Name = "Main"
+    Name = global.name
   }
 }
 

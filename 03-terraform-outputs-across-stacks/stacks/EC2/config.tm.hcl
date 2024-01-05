@@ -1,5 +1,0 @@
-globals {
-  dependencies = [
-    "stacks/vpc",
-  ]
-}
