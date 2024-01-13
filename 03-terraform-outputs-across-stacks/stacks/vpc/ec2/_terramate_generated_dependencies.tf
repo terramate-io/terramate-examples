@@ -8,4 +8,9 @@ data "terraform_remote_state" "vpc" {
     region  = "us-west-2"
     encrypt = true
   }
+  depends_on = [
+    null_resource.initial_deployment_trigger,
+  ]
+}
+resource "null_resource" "initial_deployment_trigger" {
 }
