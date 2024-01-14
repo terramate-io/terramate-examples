@@ -60,7 +60,7 @@ generate_hcl "_terramate_generated_dependencies.tf" {
   content {
     tm_dynamic "data" {
       for_each = let.active_dependencies
-      labels = ["terraform_remote_state", remote.value]
+      labels   = ["terraform_remote_state", remote.value]
       iterator = remote
 
       content {
@@ -71,8 +71,14 @@ generate_hcl "_terramate_generated_dependencies.tf" {
           region  = global.terraform.backend.s3.region
           encrypt = true
         }
+
+        depends_on = [
+          null_resource.initial_deployment_trigger
+        ]
       }
     }
+
+    resource "null_resource" "initial_deployment_trigger" {}
   }
 
   # improve UX by defining better error messages in case required configuration is missing
