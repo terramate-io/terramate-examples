@@ -1,0 +1,12 @@
+module "vpc" {
+  source  = "cloudposse/vpc/aws"
+  version = tm_try(global.terraform.modules.vpc.version, "2.0.0")
+  
+  namespace = "eg"
+  stage     = "test"
+  name      = "app"
+
+  ipv4_primary_cidr_block = "10.0.0.0/16"
+
+  assign_generated_ipv6_cidr_block = true
+}

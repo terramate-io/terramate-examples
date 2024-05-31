@@ -1,11 +1,14 @@
 terramate {
   config {
-    git {
-      default_remote    = "origin"
-      default_branch    = "main"
-      check_untracked   = false
-      check_uncommitted = false
-      check_remote      = false
-    }
+    disable_safeguards = [
+      "git",
+      # "outdated-code",
+    ]
+
+    # Enables the simplified adhoc HCL code generation
+    # https://terramate.io/docs/cli/code-generation/tmgen
+    experiments = [
+      "tmgen"
+    ]
   }
 }
