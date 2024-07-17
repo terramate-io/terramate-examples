@@ -6,10 +6,10 @@
 terramate run -C 06-workspaces-with-targets -- terraform init
 
 # List all available Terraform workspaces (per default there is only one workspace called 'default')
-terramate run -C 06-workspaces-with-targets -- terraform workspaces list
+terramate run -C 06-workspaces-with-targets -- terraform workspace list
 
 # current workspace ('default') worksapces always exists
-terramate run -C 06-workspaces-with-targets -- terraform workspaces show
+terramate run -C 06-workspaces-with-targets -- terraform workspace show
 
 # Sync the 'default' workspace as the 'default' target to Terramate Cloud
 terramate run \
