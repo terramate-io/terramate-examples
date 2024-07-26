@@ -12,10 +12,10 @@ generate_hcl "_terramate_generated_providers.tf" {
     }
 
     providers = { for k, v in tm_try(global.terraform.providers, {}) :
-      k => v.config if tm_alltrue([
+      k => {config = tm_try(v.config, {}), config_partial = tm_try(v.config_partial, {})} if tm_alltrue([
         tm_length(tm_split(".", k)) == 1,
         tm_try(v.enabled, true),
-        tm_can(v.config)
+        tm_can(v.config) || tm_can(v.config_partial)
       ])
     }
 
@@ -23,7 +23,7 @@ generate_hcl "_terramate_generated_providers.tf" {
       k => v.config if tm_alltrue([
         tm_length(tm_split(".", k)) == 2,
         tm_try(v.enabled, true),
-        tm_can(v.config)
+        tm_can(v.config) || tm_can(v.config_partial)
       ])
     }
   }
@@ -45,7 +45,10 @@ generate_hcl "_terramate_generated_providers.tf" {
     tm_dynamic "provider" {
       for_each   = let.providers
       labels     = [provider.key]
-      attributes = provider.value
+      attributes = tm_merge(
+        tm_try(provider.value.config, {}),
+        tm_try({for k, v in provider.value.config_partial : k => tm_hcl_expression(v)}, {}),
+      )
     }
 
     # Provider aliases
